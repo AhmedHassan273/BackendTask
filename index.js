@@ -70,7 +70,7 @@ app.get(`/category/:categoryID`, (req, res) => {
         where C.ID = '${id}'
         AND PP.Available = 1
         order by P.ID
-        offset  ${page - 1 || 0}*20 rows fetch next 25 rows only`, function(err, rows) {
+        offset  ${page - 1 || 0}*25 rows fetch next 25 rows only`, function(err, rows) {
 
             if (err) console.log(err);
             let Obj = rows.recordset;
